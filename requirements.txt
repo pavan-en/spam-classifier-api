@@ -6,4 +6,4 @@ pandas
 numpy
 matplotlib
 seaborn
-pickle5
+pickle
