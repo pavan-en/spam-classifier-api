@@ -1,9 +1,9 @@
 from flask import Flask, request, jsonify
-from flask_cors import CORS
+from flask_ngrok import run_with_ngrok
 from predict import predict_message
 
 app = Flask(__name__)
-CORS(app)  # Allow cross-origin requests
+run_with_ngrok(app)  # Generates public URL
 
 @app.route('/predict', methods=['POST'])
 def predict():
@@ -17,5 +17,5 @@ def predict():
     prediction = predict_message(message)
     return jsonify({"message": message, "prediction": prediction})
 
-if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000)
+if __name__ == "__main__":
+    app.run()
