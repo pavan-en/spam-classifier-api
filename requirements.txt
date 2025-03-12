@@ -1,9 +1,9 @@
 flask
 flask-cors
-flask-ngrok
 scikit-learn
 nltk
 pandas
 numpy
 matplotlib
 seaborn
+gunicorn
